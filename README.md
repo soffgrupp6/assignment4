@@ -1,39 +1,38 @@
 # Report for assignment 4
 
-This is a template for your report. You are free to modify it as needed. It is not required to use markdown for your report either, but the report has to be delivered in a standard, cross-platform format.
-
 ## Project
 
-Name:
-URL: 
-One or two sentences describing it
+Name: williamfiset/Algorithms
+
+URL: https://github.com/williamfiset/Algorithms/
+
+This repository has a variety of algorithms and data structures implemented with Java.
 
 ## Onboarding experience
 
-Did you choose a new project or continue on the previous one?If you changed the project, how did your experience differ from before?
+We went with the same project as the previous assignment so there was no new onboarding. In the last assignment our onboarding went well as the only requirements for running tests were gradle and the installation was trivial. Building and running the tests from gradle was only the matter of running `gradle test` in the terminal.
 
 ## Effort spent
 
-For each team member, how much time was spent in
+For each team member, how much time was spent:
 
-1. plenary discussions/meetings;
-2. discussions within parts of the group;
-3. reading documentation;
-4. configuration and setup;
-5. analyzing code/output;
-6. writing documentation;
-7. writing code;
-8. running code?
+| Topic                                 | Anja | Christian | Daniel | Timmy |
+|---------------------------------------|-----:|----------:|-------:|------:|
+| Preliminary discussions               |   2  |         2 |      2 |     2 |
+| Discussions within parts of the group |   0  |         0 |      0 |     0 |
+| Reading documentation                 |      |           |        |       |
+| Analyzing code/output                 |      |           |        |       |
+| Writing documentation                 |      |           |        |       |
+| Writing code                          |      |           |        |       |
+| Running code                          |      |           |        |       |
 
-For setting up tools and libraries (step 4), enumerate all dependencies you took care of and where you spent your time, if that time exceeds 30 minutes.
 
 ## Overview of issue(s) and work done.
 
-Title:
-URL:
-Summary in one or two sentences
+Title: Refactor and add tests for Skip List implementation.
+URL: https://github.com/williamfiset/Algorithms/issues/74
 
-Scope (functionality and code affected).
+The issue is about refactoring an implementation of a Skip List and adding of a complete new test suite. The scope of the issue is very local to the file with the Skip List implementation and the test file to be created.
 
 ## Requirements affected by functionality being refactored
 
