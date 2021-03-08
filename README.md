@@ -34,6 +34,10 @@ URL: https://github.com/williamfiset/Algorithms/issues/74
 
 The issue is about refactoring an implementation of a Skip List and adding of a complete new test suite. The scope of the issue is very local to the file with the Skip List implementation and the test file to be created.
 
+When we started looking at this issue, we intended to restructure and refactor the code, and write some tests for the implementation as specified by the issue. However, after analyzing the code it soon became clear that the code needed not only refactoring, but actually rewriting. Many methods were not only messy but also buggy or simply wrong. Some parts had unresonable implementations of methods. Tests were alse completely missing, probably because the code did not work.
+
+The work needed to resolve this issue was thus much more extensive than we first expected.
+
 ## Requirements affected by functionality being refactored
 
 Optional (point 3): trace tests to requirements.
