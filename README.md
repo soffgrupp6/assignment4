@@ -50,6 +50,8 @@ The work needed to resolve this issue was thus much more extensive than we first
 
 ## Requirements affected by functionality being refactored
 
+The requirements can be determined from the Algorithm itself, since a SkipList have some predefined functionality that is must have to be used as a SkipList.
+
 The requirements state that the datastructure shall include the following methods:
  - Insert, a method to insert a new object in the list
  - Remove, a method to remove an object from the list
@@ -66,7 +68,12 @@ Additionally the methods have some edge case requirements which are:
 
 #### Optional (point 3):
 
-All new tests (all tests) was created by choosing a requirement and writing one or more test(s) based on that requirement
+All new tests (all tests) were created by selecting a requirement and writing one or more test(s) based on that requirement
+
+For instance:
+
+- testInsertGreaterThanMaxValue: tests the "Insert shall return false if trying to insert an object with a key that is greater than the initialized MAX value" requirement.
+- testDuplicate: tests the "Insert shall return false if trying to insert an object with the same key as an already existing object" requirement.
 
 ## Code changes
 
@@ -392,11 +399,13 @@ index 76c873e..5354086 100644
 
 #### Optional (point 4):
 
-The patch is clean and formatted according to the the specified code standard of the repository. We also took effort in making the tests formatted like other tests in the repository.
+The patch is clean and formatted according to the specified code standard of the repository, and so does not add any unnecessary whitespace changes. We also took effort in making the tests formatted like other tests in the repository. No extraneous output or debug output is included in the code.
 
 #### Optional (point 5):
 
 The patch passes all automated checks and is considered for acceptance.
+
+Link here: 
 
 ## Test results
 
