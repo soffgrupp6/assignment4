@@ -19,12 +19,12 @@ For each team member, how much time was spent:
 | Topic                                 | Anja | Christian | Daniel | Timmy |
 |---------------------------------------|-----:|----------:|-------:|------:|
 | Preliminary discussions               |   2  |         2 |      2 |     2 |
-| Discussions within parts of the group |   0  |         3 |      0 |     0 |
-| Reading documentation                 |      |         0 |        |       |
-| Analyzing code/output                 |      |         6 |        |       |
-| Writing documentation                 |      |         3 |        |       |
-| Writing code                          |      |         4 |        |       |
-| Running code                          |      |         1 |        |       |
+| Discussions within parts of the group |   0  |         3 |      0 |     3 |
+| Reading documentation                 |      |         0 |        |     0 |
+| Analyzing code/output                 |      |         6 |        |     3 |
+| Writing documentation                 |      |         3 |        |     3 |
+| Writing code                          |      |         4 |        |     2 |
+| Running code                          |      |         1 |        |     1 |
 
 
 ## More on refactoring
