@@ -50,10 +50,23 @@ The work needed to resolve this issue was thus much more extensive than we first
 
 ## Requirements affected by functionality being refactored
 
+The requirements state that the datastructure shall include the following methods:
+ - Insert, a method to insert a new object in the list
+ - Remove, a method to remove an object from the list
+ - Size, a method to get the number of elements in the list
+ - GetIndex, a method to find the index of an object in the list
+ - Find, a method to check whether an element exists in the list
+
+Additionally the methods have some edge case requirements which are:
+- Insert shall return false if trying to insert an object with the same key as an already existing object
+- Insert shall return false if trying to insert an object with a key that is greater than the initialized MAX value
+- Insert shall return false if trying to insert an object with a key that is lesser than the initialized MIN value
+- Remove shall return false if trying to remove a non existing object
+- GetIndex shall return -1 if trying to get the index of a non existing object
+
 #### Optional (point 3):
 
-This is how we traced the tests to the requirements...
-
+All new tests (all tests) was created by choosing a requirement and writing one or more test(s) based on that requirement
 
 ## Code changes
 
