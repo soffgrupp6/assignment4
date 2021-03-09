@@ -32,7 +32,8 @@ For each team member, how much time was spent:
 | Topic                                | Effort | How often used | Outcome |
 |--------------------------------------|-------:|---------------:|--------:|
 | Rename field (Christian)             |    Low |          Often |  Very much more understandable code with better naming practices |
-| Extract method                       | Medium  |               |       - |
+| Extract method (Anja)                | Medium |          Often | Move code to a separate method when it can be grouped. This makes the code more readable and easy to overview, since methods easily become very large and complicated otherwise. Sometimes, the code in the extracted method can be reused, which also avoids code repetition. |
+| Pull up or push down (Anja)          | Medium | Sometimes | In object-oriented programming, move a method up to its superclass or down to a subclass. Moving a method up when it is used by many subclasses avoids code repetition and makes the code it easier to maintain, since changes only need to be done in one place. Moving a method down when it is used by only one or few subclasses makes the classes more coherent and the code easier to navigate, since the methods can be found they are expected. |
 | Replace conditional with polymorphism |        |               |       - |
 
 
