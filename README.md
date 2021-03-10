@@ -19,7 +19,7 @@ For each team member, how much time was spent:
 | Topic                                 | Anja | Christian | Daniel | Timmy |
 |---------------------------------------|-----:|----------:|-------:|------:|
 | Preliminary discussions               |   2  |         2 |      2 |     2 |
-| Discussions within parts of the group |   4  |         4 |      6 |     6 |
+| Discussions within parts of the group |   6  |         6 |      6 |     6 |
 | Analyzing code/output                 |   4  |         6 |      4 |     3 |
 | Writing documentation                 |   2  |         2 |      4 |     5 |
 | Writing code                          |   6  |         5 |      5 |     4 |
@@ -58,6 +58,10 @@ When we started looking at this issue, we intended to restructure and refactor t
 
 The work needed to resolve this issue was thus much more extensive than we first expected.
 
+### Implementation
+
+
+
 ## Requirements affected by functionality being refactored
 
 The requirements can be determined from the Algorithm itself, since a SkipList have some predefined functionality that it must have to be used as a SkipList.
@@ -66,10 +70,10 @@ The requirements are that the data structure shall include the following methods
 
 [0] *Constructor*, the constructor of the list.
 This method requires three arguments (int *height*, int *maxValue*, int *minValue*) which are used to initialize the list.
-The *height* argument is used to set the height of the list. 
-*maxValue* and *minValue* are used to set the start nodes of the list, where *minValue* is used as key in the head node and *maxValue* is used as key in the tail node. 
- 
-[1] *Insert* , a method to insert a new object in the list. 
+The *height* argument is used to set the height of the list.
+*maxValue* and *minValue* are used to set the start nodes of the list, where *minValue* is used as key in the head node and *maxValue* is used as key in the tail node.
+
+[1] *Insert* , a method to insert a new object in the list.
 This method requires one argument (int *key*), that is used to determine the position of the new element in the list.
 When the position is found the method should use a random number generator to decide whether to insert the same element at a higher level in the list as well. Each level in the list has different probabilites of having an element inserted. Insert should return a boolean, if the insertion was successfull the return should be *true*.
 If insert is called with a *key* that is either higher than *maxValue* or lower than *minValue*, insert should return *false*.
@@ -88,7 +92,7 @@ Only the elements in the bottom level are counted. Size should never return a va
 [4] *GetIndex* , a method to find the index of an object in the list.
 This method takes one argument (int *key*) which is used to identifiy the element which is to be found.
 When the element is found the method should return an int which represent the list-index of the element.
-If the element isn't found the method should return -1. 
+If the element isn't found the method should return -1.
 
 [5] *Find* , a method to check whether an element exists in the list.
 This method takes one argument (int *key*) which is used to identify the element which is to be found.
@@ -522,9 +526,11 @@ Optional (point 2): relation to design pattern(s).
 
 What are your main take-aways from this project? What did you learn?
 
-
-
 <!--- > In particular, mention your experience about the given documentation/examples of the project, its tool framework  <!--->
+
+We learned a lot from this experience. In the implementation there was no previous documentation or examples. The tool used by the project is Gradle which makes everything very easy to get going. The repository used Googles Java code standard and the source code could be automatically formatted using Gradle. It is very easy to contribute to the project by making sure the code is formatted, that tests are present and that the documentation looks okay.
+
+Our task was quite decoupled from the rest of the project as it is a single data structure implementation that is not called from anywhere else in the repository. It was indeed not even functioning before our implementation.
 
 How did you grow as a team, using the Essence standard to evaluate yourself?
 
