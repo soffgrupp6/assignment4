@@ -19,18 +19,20 @@ For each team member, how much time was spent:
 | Topic                                 | Anja | Christian | Daniel | Timmy |
 |---------------------------------------|-----:|----------:|-------:|------:|
 | Preliminary discussions               |   2  |         2 |      2 |     2 |
-| Discussions within parts of the group |   0  |         3 |      0 |     3 |
-| Reading documentation                 |      |         0 |        |     0 |
-| Analyzing code/output                 |      |         6 |        |     3 |
-| Writing documentation                 |      |         3 |        |     3 |
-| Writing code                          |      |         4 |        |     2 |
-| Running code                          |      |         1 |        |     1 |
+| Discussions within parts of the group |   4  |         4 |      0 |     3 |
+| Analyzing code/output                 |   4  |         6 |        |     3 |
+| Writing documentation                 |   2  |         2 |        |     3 |
+| Writing code                          |   6  |         5 |        |     2 |
+| Running code                          |   1  |         1 |        |     1 |
 
+### Contributions
+
+We all made a refactoring plan as a group and together split up work and parts of the report writing. Anja and Christian were mostly responsible for writing the refactoring and Timmy and Daniel with the test implementations. We started working by ourselves and Christian and Anja did some pair programming. The group then synced together to discuss API, and architecture of the class. The report was written on in parts by all team members.
 
 ## More on refactoring
 
 | Topic                                | Effort | How often used | Outcome |
-|--------------------------------------|-------:|---------------:|--------:|
+|--------------------------------------|:-------|:---------------|:--------|
 | Rename field (Christian)             |    Low |          Often |  Very much more understandable code with better naming practices |
 | Extract method (Anja)                | Medium |          Often | Move code to a separate method when it can be grouped. This makes the code more readable and easy to overview, since methods easily become very large and complicated otherwise. Sometimes, the code in the extracted method can be reused, which also avoids code repetition. |
 | Pull up or push down (Anja)          | Medium | Sometimes | In object-oriented programming, move a method up to its superclass or down to a subclass. Moving a method up when it is used by many subclasses avoids code repetition and makes the code it easier to maintain, since changes only need to be done in one place. Moving a method down when it is used by only one or few subclasses makes the classes more coherent and the code easier to navigate, since the methods can be found they are expected. |
@@ -44,7 +46,7 @@ URL: https://github.com/williamfiset/Algorithms/issues/74
 
 The issue is about refactoring an implementation of a Skip List and adding of a complete new test suite. The scope of the issue is very local to the file with the Skip List implementation and the test file to be created.
 
-When we started looking at this issue, we intended to restructure and refactor the code, and write some tests for the implementation as specified by the issue. However, after analyzing the code it soon became clear that the code needed not only refactoring, but actually rewriting. Many methods were not only messy but also buggy or simply wrong. Some parts had unresonable implementations of methods. Tests were alse completely missing, probably because the code did not work.
+When we started looking at this issue, we intended to restructure and refactor the code, and write some tests for the implementation as specified by the issue. However, after analyzing the code it soon became clear that the code needed not only refactoring, but actually rewriting. Many methods were not only messy but also buggy or simply wrong. Some parts had unreasonable implementations of methods. Tests were also completely missing, probably because the code did not work.
 
 The work needed to resolve this issue was thus much more extensive than we first expected.
 
@@ -52,7 +54,7 @@ The work needed to resolve this issue was thus much more extensive than we first
 
 The requirements can be determined from the Algorithm itself, since a SkipList have some predefined functionality that is must have to be used as a SkipList.
 
-The requirements state that the datastructure shall include the following methods:
+The requirements state that the data structure shall include the following methods:
  - Insert, a method to insert a new object in the list
  - Remove, a method to remove an object from the list
  - Size, a method to get the number of elements in the list
@@ -68,7 +70,7 @@ Additionally the methods have some edge case requirements which are:
 
 #### Optional (point 3):
 
-All new tests (all tests) were created by selecting a requirement and writing one or more test(s) based on that requirement
+All new tests (all tests) were created by selecting a requirement and writing one or more test(s) based on that requirement.
 
 For instance:
 
@@ -405,7 +407,7 @@ The patch is clean and formatted according to the specified code standard of the
 
 The patch passes all automated checks and is considered for acceptance.
 
-Link here: 
+Link here:
 
 ## Test results
 
@@ -491,6 +493,9 @@ Optional (point 2): relation to design pattern(s).
 
 What are your main take-aways from this project? What did you learn?
 
+
+
+<!--- > In particular, mention your experience about the given documentation/examples of the project, its tool framework  <!--->
 
 How did you grow as a team, using the Essence standard to evaluate yourself?
 
