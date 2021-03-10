@@ -21,8 +21,8 @@ For each team member, how much time was spent:
 | Preliminary discussions               |   2  |         2 |      2 |     2 |
 | Discussions within parts of the group |   4  |         4 |      6 |     6 |
 | Analyzing code/output                 |   4  |         6 |      4 |     3 |
-| Writing documentation                 |   2  |         2 |      4 |     3 |
-| Writing code                          |   6  |         5 |      5 |     6 |
+| Writing documentation                 |   2  |         2 |      4 |     5 |
+| Writing code                          |   6  |         5 |      5 |     4 |
 | Running code                          |   1  |         1 |      1 |     1 |
 
 ### Contributions
@@ -92,11 +92,13 @@ The return value should be *true* if the element is found in the list and *false
 #### Optional (point 3):
 
 All new tests (all tests) were created by selecting a requirement and writing one or more test(s) based on that requirement.
+The requirement for a certain test can be traced using the comment above the test.
 
 For instance:
 
 - testInsertGreaterThanMaxValue: tests the "Insert shall return false if trying to insert an object with a key that is greater than the initialized MAX value" requirement.
 - testDuplicate: tests the "Insert shall return false if trying to insert an object with the same key as an already existing object" requirement.
+
 
 ## Code changes
 
