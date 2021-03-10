@@ -46,7 +46,6 @@ No Unit tests were implemented from the beginning either, thus we had to be put 
 | Rename field (Christian)             |    Low |          Often |  Very much more understandable code with better naming practices |
 | Extract method (Anja)                | Medium |          Often | Move code to a separate method when it can be grouped. This makes the code more readable and easy to overview, since methods easily become very large and complicated otherwise. Sometimes, the code in the extracted method can be reused, which also avoids code repetition. |
 | Pull up or push down (Anja)          | Medium | Sometimes | In object-oriented programming, move a method up to its superclass or down to a subclass. Moving a method up when it is used by many subclasses avoids code repetition and makes the code it easier to maintain, since changes only need to be done in one place. Moving a method down when it is used by only one or few subclasses makes the classes more coherent and the code easier to navigate, since the methods can be found they are expected. |
-| Replace conditional with polymorphism |        |               |       - |
 | Utilizing Dependency Injection (Timmy) | Medium | Often | By passing dependencies to a class as constructor arguments it makes the code a lot easier to Unit test, as you can easily mock the dependencies that are used. It also makes for more reusable code, since you can pass different dependencies depending on the requirements, as long as the the class passed agrees on the interface contract.  |
 | Extract class to file (Daniel)        | Medium |         Often | When a file becomes to large it can be helpful to move some class in the file to a separate file and import it |
 
@@ -553,3 +552,7 @@ We learned a lot from this experience. In the implementation there was no previo
 Our task was quite decoupled from the rest of the project as it is a single data structure implementation that is not called from anywhere else in the repository. It was indeed not even functioning before our implementation.
 
 How did you grow as a team, using the Essence standard to evaluate yourself?
+
+Since the course start, we have worked a lot with our communication within the team. This has contributed much to our path to forming a well-collaborating team. When we started out, it happened frequently that the team members misunderstood each other or didn't have the same view of what was expected from everyone. However, we worked on this by having more open conversations, where we made sure that everyone got to speak their opinions and ask their questions. Currently, the team is working cohesively and easily adapts to new contexts and tasks. The team identifies and adresses issues and evaluates the work continously. Our asessment is that we are on the *performing* state as a group.
+
+Despite this, we can still improve as a group. One such improvement would be more systematic and continous evaluation of our work.
