@@ -19,11 +19,20 @@ For each team member, how much time was spent:
 | Topic                                 | Anja | Christian | Daniel | Timmy |
 |---------------------------------------|-----:|----------:|-------:|------:|
 | Preliminary discussions               |   2  |         2 |      2 |     2 |
+<<<<<<< Updated upstream
 | Discussions within parts of the group |   4  |         4 |      0 |     3 |
 | Analyzing code/output                 |   4  |         6 |        |     3 |
 | Writing documentation                 |   2  |         2 |        |     3 |
 | Writing code                          |   6  |         5 |        |     2 |
 | Running code                          |   1  |         1 |        |     1 |
+=======
+| Discussions within parts of the group |   0  |         3 |      4 |     0 |
+| Reading documentation                 |      |         0 |      4 |       |
+| Analyzing code/output                 |      |         6 |      4 |       |
+| Writing documentation                 |      |         3 |      1 |       |
+| Writing code                          |      |         4 |      5 |       |
+| Running code                          |      |         1 |      1 |       |
+>>>>>>> Stashed changes
 
 ### Contributions
 
@@ -38,6 +47,8 @@ We all made a refactoring plan as a group and together split up work and parts o
 | Pull up or push down (Anja)          | Medium | Sometimes | In object-oriented programming, move a method up to its superclass or down to a subclass. Moving a method up when it is used by many subclasses avoids code repetition and makes the code it easier to maintain, since changes only need to be done in one place. Moving a method down when it is used by only one or few subclasses makes the classes more coherent and the code easier to navigate, since the methods can be found they are expected. |
 | Replace conditional with polymorphism |        |               |       - |
 | Utilising Dependency Injection (Timmy) | Medium | Often | By passing dependencies to a class as constructor arguments it makes the code a lot easier to Unit test, as you can easily mock the dependencies that are used. It also makes for more reusable code, since you can pass different dependencies depending on the requirements, as long as the the class passed agrees on the interface contract.  |
+| Extract class to file (Daniel)        | Medium |         Often | When a file becomes to large it can be helpful to move some class in the file to a separete file and import it |
+
 
 ## Overview of issue(s) and work done.
 
@@ -52,21 +63,40 @@ The work needed to resolve this issue was thus much more extensive than we first
 
 ## Requirements affected by functionality being refactored
 
-The requirements can be determined from the Algorithm itself, since a SkipList have some predefined functionality that is must have to be used as a SkipList.
+The requirements can be determined from the Algorithm itself, since a SkipList have some predefined functionality that it must have to be used as a SkipList.
 
-The requirements state that the data structure shall include the following methods:
- - Insert, a method to insert a new object in the list
- - Remove, a method to remove an object from the list
- - Size, a method to get the number of elements in the list
- - GetIndex, a method to find the index of an object in the list
- - Find, a method to check whether an element exists in the list
+The requirements are that the data structure shall include the following methods:
 
-Additionally the methods have some edge case requirements which are:
-- Insert shall return false if trying to insert an object with the same key as an already existing object
-- Insert shall return false if trying to insert an object with a key that is greater than the initialized MAX value
-- Insert shall return false if trying to insert an object with a key that is lesser than the initialized MIN value
-- Remove shall return false if trying to remove a non existing object
-- GetIndex shall return -1 if trying to get the index of a non existing object
+[0] *Constructor*, the constructor of the list.
+This method requires three arguments (int *height*, int *maxValue*, int *minValue*) which are used to initialize the list.
+The *height* argument is used to set the height of the list. 
+*maxValue* and *minValue* are used to set the start nodes of the list, where *minValue* is used as key in the head node and *maxValue* is used as key in the tail node. 
+ 
+[1] *Insert* , a method to insert a new object in the list. 
+This method requires one argument (int *key*), that is used to determine the position of the new element in the list.
+When the position is found the method should use a random number generator to decide whether to insert the same element at a higher level in the list as well. Each level in the list has different probabilites of having an element inserted. Insert should return a boolean, if the insertion was successfull the return should be *true*.
+If insert is called with a *key* that is either higher than *maxValue* or lower than *minValue*, insert should return *false*.
+Insert should also return *false* if the *key* is equal to an already existing key in the list.
+
+[2] *Remove* , a method to remove an object from the list.
+This method requires one argument (int *key*), which is used to identify the element which is to be removed.
+When the element is found it should be removed from all levels where the element is present.
+Remove should return a boolean, if the removal was successful it should return *true*.
+If *key* is not found in the list, the method should return *false*.
+
+[3] *Size* , a method to get the number of elements in the list.
+This method takes zero arguments and returns an int which represents how many elements exist in the list.
+Only the elements in the bottom level are counted. Size should never return a value lower than two, this is because the head and tail nodes are permanently in the list.
+
+[4] *GetIndex* , a method to find the index of an object in the list.
+This method takes one argument (int *key*) which is used to identifiy the element which is to be found.
+When the element is found the method should return an int which represent the list-index of the element.
+If the element isn't found the method should return -1. 
+
+[5] *Find* , a method to check whether an element exists in the list.
+This method takes one argument (int *key*) which is used to identify the element which is to be found.
+This method is similiar to GetIndex but instead of returning an index value this method returns a boolean.
+The return value should be *true* if the element is found in the list and *false* if the element isn't found.
 
 #### Optional (point 3):
 
