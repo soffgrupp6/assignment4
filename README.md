@@ -539,8 +539,6 @@ Except for these refactorings some parts of the code were also rewritten to meet
 
 Tests relating to the requirements were written in the same manner as the tests for other data structures in the repository.
 
-Add relation to refactoring patterns and UML
-
 ## Overall experience
 
 What are your main take-aways from this project? What did you learn?
