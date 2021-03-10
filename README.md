@@ -52,6 +52,10 @@ When we started looking at this issue, we intended to restructure and refactor t
 
 The work needed to resolve this issue was thus much more extensive than we first expected.
 
+### Implementation
+
+
+
 ## Requirements affected by functionality being refactored
 
 The requirements can be determined from the Algorithm itself, since a SkipList have some predefined functionality that it must have to be used as a SkipList.
@@ -516,9 +520,11 @@ Optional (point 2): relation to design pattern(s).
 
 What are your main take-aways from this project? What did you learn?
 
-
-
 <!--- > In particular, mention your experience about the given documentation/examples of the project, its tool framework  <!--->
+
+We learned a lot from this experience. In the implementation there was no previous documentation or examples. The tool used by the project is Gradle which makes everything very easy to get going. The repository used Googles Java code standard and the source code could be automatically formatted using Gradle. It is very easy to contribute to the project by making sure the code is formatted, that tests are present and that the documentation looks okay.
+
+Our task was quite decoupled from the rest of the project as it is a single data structure implementation that is not called from anywhere else in the repository. It was indeed not even functioning before our implementation.
 
 How did you grow as a team, using the Essence standard to evaluate yourself?
 
