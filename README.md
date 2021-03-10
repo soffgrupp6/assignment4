@@ -29,6 +29,12 @@ For each team member, how much time was spent:
 
 We all made a refactoring plan as a group and together split up work and parts of the report writing. Anja and Christian were mostly responsible for writing the refactoring and Timmy and Daniel with the test implementations. We started working by ourselves and Christian and Anja did some pair programming. The group then synced together to discuss API, and architecture of the class. The report was written on in parts by all team members.
 
+### Extraordinary
+
+After selecting which issue to work on, we soon noticed that the SkipList implementation did not work at all as expected. This meant that, not only did we have to refactor the current code, but we also had to track down what was not working and fix it without rewriting all of the code. This turned out to be a far more complex process than what would have been if we were just refactoring it, and doing this successfully we think is extraordinary if anything.
+
+No Unit tests were implemented from the beginning either, thus we had to be put extra effort into determining the proper requirements and considering all the edge cases that have to be Unit tested. We also did great work in tracing the requirements to the Unit tests, making sure that the Unit tests were really testing what they should be testing.
+
 ## More on refactoring
 
 | Topic                                | Effort | How often used | Outcome |
