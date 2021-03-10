@@ -62,9 +62,7 @@ When we started looking at this issue, we intended to restructure and refactor t
 
 The work needed to resolve this issue was thus much more extensive than we first expected.
 
-### Implementation
-
-
+Our work done is described under the *Code changes* section.
 
 ## Requirements affected by functionality being refactored
 
@@ -516,9 +514,35 @@ The test file can be viewed [here](https://github.com/soffgrupp6/Algorithms/blob
 
 ## UML class diagram and its description
 
+These two UML diagrams show the difference between the original code of the data structure and the structure after the refactorization:
+
+<img src="SkipListOriginalUML.png" alt="" width="300"/>
+<img src="SkipListUML.png" alt="" width="300"/>
+
+The following two pictures show the method reference diagram before and after the refactorization:
+
+<img src="SkipListOriginal.png" alt="" width="700"/>
+<img src="SkipList.png" alt="" width="700"/>
+
+
+
 ### Key changes/classes affected
 
+<<<<<<< HEAD
 Optional (point 2): relation to design pattern(s).
+=======
+#### Relation to refactoring patterns
+
+The refactoring made was extensive, and multiple common refactoring tecniques and patterns were used. Firstly, one redundant inner class was removed and replaced by a variable. Many methods were pulled from another inner class Node into the the outer class SkipList, since the functionality was not needed in the inner class.
+
+In the original code, skip list methods were called using Node objects as parameters. These were replaced so that methods, including the API, can be used only with integers as parameters. This simlifies the usage and adds an abstraction layer.
+
+Parameters and variables with names that were hard to understand were also renamed. Parts of some methods were extracted to make the code more readable, and to avoid code repetition. Javadoc and comments were added in order to make the code more understandable.
+
+Exept for these refactorings some parts of the code were also rewritten to meet the requirements for the data structure.
+
+Tests relating to the requirements were written in the same manner as the tests for other data structures in the repository.
+>>>>>>> Add relation to refactoring patterns and UML
 
 ## Overall experience
 
@@ -531,3 +555,10 @@ We learned a lot from this experience. In the implementation there was no previo
 Our task was quite decoupled from the rest of the project as it is a single data structure implementation that is not called from anywhere else in the repository. It was indeed not even functioning before our implementation.
 
 How did you grow as a team, using the Essence standard to evaluate yourself?
+<<<<<<< HEAD
+=======
+
+Optional (point 6): How would you put your work in context with best software engineering practice?
+
+Optional (point 7): Is there something special you want to mention here?
+>>>>>>> Add relation to refactoring patterns and UML
