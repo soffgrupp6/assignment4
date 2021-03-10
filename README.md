@@ -8,6 +8,10 @@ URL: https://github.com/williamfiset/Algorithms/
 
 This repository has a variety of algorithms and data structures implemented with Java.
 
+#### P+ Requirements
+
+We are aiming for requirements: 2, 3, 4, 5, and 7
+
 ## Onboarding experience
 
 We went with the same project as the previous assignment so there was no new onboarding. In the last assignment our onboarding went well as the only requirements for running tests were gradle and the installation was trivial. Building and running the tests from gradle was only the matter of running `gradle test` in the terminal.
@@ -29,7 +33,7 @@ For each team member, how much time was spent:
 
 We all made a refactoring plan as a group and together split up work and parts of the report writing. Anja and Christian were mostly responsible for writing the refactoring and Timmy and Daniel with the test implementations. We started working by ourselves and Christian and Anja did some pair programming. The group then synced together to discuss API, and architecture of the class. The report was written on in parts by all team members.
 
-### Extraordinary
+### Optional (point 7) Extraordinary
 
 After selecting which issue to work on, we soon noticed that the SkipList implementation did not work at all as expected. This meant that, not only did we have to refactor the current code, but we also had to track down what was not working and fix it without rewriting all of the code. This turned out to be a far more complex process than what would have been if we were just refactoring it, and doing this successfully we think is extraordinary if anything.
 
@@ -514,8 +518,6 @@ The test file can be viewed [here](https://github.com/soffgrupp6/Algorithms/blob
 
 ### Key changes/classes affected
 
-Optional (point 1): Architectural overview.
-
 Optional (point 2): relation to design pattern(s).
 
 ## Overall experience
@@ -529,7 +531,3 @@ We learned a lot from this experience. In the implementation there was no previo
 Our task was quite decoupled from the rest of the project as it is a single data structure implementation that is not called from anywhere else in the repository. It was indeed not even functioning before our implementation.
 
 How did you grow as a team, using the Essence standard to evaluate yourself?
-
-Optional (point 6): How would you put your work in context with best software engineering practice?
-
-Optional (point 7): Is there something special you want to mention here?
