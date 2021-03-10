@@ -440,7 +440,7 @@ The patch is clean and formatted according to the specified code standard of the
 
 The patch passes all automated checks and is considered for acceptance.
 
-Link here:
+Link here: https://github.com/williamfiset/Algorithms/pull/261
 
 ## Test results
 
